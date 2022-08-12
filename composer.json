@@ -1,0 +1,15 @@
+{
+    "name": "luizhenrique/pdi",
+    "autoload": {
+        "psr-4": {
+            "SOLID\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "eng-luiz",
+            "email": "luiz.silva@agilize.com.br"
+        }
+    ],
+    "require": {}
+}
