@@ -1,6 +1,4 @@
 <?php
-namespace SOLID\singleResponsability;
-
 
 class GreekGod
 {
@@ -11,8 +9,15 @@ class GreekGod
         $this->humor = rand(1, 100);
     }
 
-    public function giveBless($followerDevotion){
-        $this->humor += $followerDevotion;
+    public function increaseHumor()
+    {
+        $this->humor += 15;
+    }
+
+    public function defineBless($isDevote){
+        if($isDevote){
+            $this->increaseHumor();
+        }
 
         return $this->humor > 51 ? 'You be blessed!!!' : 'You be doomed!!!';
     }

@@ -14,6 +14,6 @@ class GreekGod implements God
     public function giveBless($followerDevotion){
         $this->humor += $followerDevotion;
 
-        return $this->humor > 51 ? 'You be blessed!!!' : 'You be doomed!!!';
+        return $this->humor > 51 ? 'You will be blessed!!!' : 'You will be doomed!!!';
     }
 }

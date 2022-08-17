@@ -1,18 +1,17 @@
 <?php
+
 namespace SOLID\openClosed;
 
-class NordicGod extends God
+class God
 {
-    protected $humor;
-
     public function __construct()
     {
-        $this->humor = rand(20, 100);
+        $this->humor = rand(1, 1000);
     }
 
     public function defineBless($followerDevotion){
         $this->humor += $followerDevotion;
 
-        return $this->humor > 60 ? 'You be blessed!!!' : 'You be doomed!!!';
+        return $this->humor > 510 ? 'You be blessed!!!' : 'You be doomed!!!';
     }
 }

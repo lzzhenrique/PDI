@@ -1,7 +1,9 @@
 <?php
-namespace SOLID\openClosed;
+namespace SOLID\dependencyInversion;
 
-class GreekFollower extends Follower
+use SOLID\Dependency\IGreekFollower;
+
+class GreekFollower implements  IGreekFollower
 {
     protected $isDevote;
 
@@ -22,6 +24,15 @@ class GreekFollower extends Follower
     public function isDevote()
     {
         return $this->isDevote;
+    }
+
+    public function thankGod()
+    {
+        if ($this->isDevote()){
+            return 'Thank godddd';
+        }
+
+        return 'Its diabo falt';
     }
 }
 

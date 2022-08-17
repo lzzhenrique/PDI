@@ -1,13 +1,20 @@
 <?php
 namespace interfaceSeg;
 
-class NordicGod implements God
+use SOLID\INordicGod;
+
+class NordicGod implements INordicGod
 {
     protected $humor;
 
     public function __construct()
     {
         $this->humor = rand(20, 100);
+    }
+
+    public function speakOldNorse()
+    {
+        return 'takk for PDI!!!!!';
     }
 
     public function giveBless($followerDevotion){

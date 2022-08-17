@@ -1,13 +1,19 @@
 <?php
 namespace SOLID\openClosed;
 
-class NordicFollower implements Follower
+
+class NordicFollower extends Follower
 {
     protected $isDevote;
 
     public function __construct()
     {
-        $this->isDevote = rand(1,9) === rand(1,9);
+        $this->isDevote = $this->defineFollowerDevotion();
+    }
+
+    public function defineFollowerDevotion()
+    {
+        return rand(1,9) === rand(1,9);
     }
 
     public function isDevote()
@@ -15,9 +21,7 @@ class NordicFollower implements Follower
         return $this->isDevote;
     }
 
-    public function followerDevotion(){
-        return $this->isDevote() ? rand(1, 10) : rand(5, 20);
+    public function levelOfFollowerDevotion(){
+        return $this->isDevote() ? rand(5, 20) : rand(0, 10);
     }
 }
-
-

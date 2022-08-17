@@ -1,9 +1,9 @@
 <?php
 
-class GreekFollower
-{
-    protected $isDevote;
+namespace SOLID\openClosed;
 
+class Follower
+{
     public function __construct()
     {
         $this->isDevote = $this->defineFollowerDevotion();
@@ -11,7 +11,11 @@ class GreekFollower
 
     public function defineFollowerDevotion()
     {
-        return rand(1,12) === rand(1,12);
+        return rand(1,1000) === rand(1,1000);
+    }
+
+    public function levelOfFollowerDevotion(){
+        return $this->isDevote() ? rand(1, 1000) : rand(1, 1000);
     }
 
     public function isDevote()
@@ -19,5 +23,3 @@ class GreekFollower
         return $this->isDevote;
     }
 }
-
-

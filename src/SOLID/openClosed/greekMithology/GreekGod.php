@@ -1,7 +1,8 @@
 <?php
-namespace SOLID\openClosed;
 
-class GreekGod implements God
+use SOLID\openClosed\God;
+
+class GreekGod  extends God
 {
     protected $humor;
 
@@ -10,7 +11,7 @@ class GreekGod implements God
         $this->humor = rand(1, 100);
     }
 
-    public function giveBless($followerDevotion){
+    public function defineBless($followerDevotion){
         $this->humor += $followerDevotion;
 
         return $this->humor > 51 ? 'You be blessed!!!' : 'You be doomed!!!';

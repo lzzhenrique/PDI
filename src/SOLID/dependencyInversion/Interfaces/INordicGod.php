@@ -2,7 +2,9 @@
 
 namespace SOLID;
 
-interface God
+interface INordicGod
 {
     public function giveBless($followerDevotion);
+
+    public function speakOldNorse();
 }
